@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.act2_din.ui.theme.Dark
+import com.example.act2_din.ui.theme.Elementos
 import com.example.act2_din.ui.theme.Gray
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -20,18 +21,18 @@ fun Usuario(Usuario:String, onUsuarioChange: (String) -> Unit){
     OutlinedTextField(
         value = Usuario,
         onValueChange = onUsuarioChange,
-        label = { Text(text = "Usuario", color = Color.Black) },
+        label = { Text(text = "Usuario", color = Elementos) },
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = Dark,   // Borde cuando tiene foco
-            unfocusedBorderColor = Gray,  // Borde cuando no tiene foco
-            cursorColor = Dark,          // Color del cursor cuando tiene foco
-            focusedLabelColor = Dark,    // Color de la etiqueta cuando tiene foco
-            unfocusedLabelColor = Gray,   // Color de la etiqueta cuando no tiene foco
-            focusedTextColor = Dark,
+            focusedBorderColor = Elementos,
+            unfocusedBorderColor = Gray,
+            cursorColor = Elementos,
+            focusedLabelColor = Elementos,
+            unfocusedLabelColor = Gray,
+            focusedTextColor = Elementos,
             unfocusedTextColor = Gray
         ),
         modifier = Modifier
             .size(200.dp, 60.dp)
     )
-    Spacer(Modifier.height(25.dp))
+    Spacer(Modifier.height(15.dp))
 }

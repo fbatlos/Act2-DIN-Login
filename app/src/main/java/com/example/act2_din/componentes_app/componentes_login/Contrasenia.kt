@@ -21,6 +21,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import com.example.act2_din.ui.theme.Dark
+import com.example.act2_din.ui.theme.Elementos
 import com.example.act2_din.ui.theme.Gray
 
 
@@ -33,19 +34,19 @@ fun Contrasenia(contrasenia: String, onContraseniaChange: (String) -> Unit){
         value = contrasenia,
         onValueChange = onContraseniaChange,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = Dark,   // Borde cuando tiene foco
-            unfocusedBorderColor = Gray,  // Borde cuando no tiene foco
-            cursorColor = Dark,          // Color del cursor cuando tiene foco
-            focusedLabelColor = Dark,    // Color de la etiqueta cuando tiene foco
-            unfocusedLabelColor = Gray, // Color de la etiqueta cuando no tiene foco
-            focusedTextColor = Dark,
+            focusedBorderColor = Elementos,
+            unfocusedBorderColor = Gray,
+            cursorColor = Elementos,
+            focusedLabelColor = Elementos,
+            unfocusedLabelColor = Gray,
+            focusedTextColor = Elementos,
             unfocusedTextColor = Gray
         ),
-        label = { Text(text = "Contraseña" , color = Color.Black) },
+        label = { Text(text = "Contraseña" , color = Elementos) },
         trailingIcon = {
             if (contrasenia.isNotEmpty()) {
                 IconButton(onClick = { active=!active }) {
-                    Icon(if (active) Icons.Filled.Visibility else Icons.Filled.VisibilityOff, contentDescription = "Ver texto" , tint = Gray)
+                    Icon(if (active) Icons.Filled.Visibility else Icons.Filled.VisibilityOff, contentDescription = "Ver texto" , tint = Elementos)
                 }
             }
         },

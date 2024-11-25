@@ -7,27 +7,32 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.example.act2_din.ui.theme.ColorBoton
 import com.example.act2_din.ui.theme.Dark
 import com.example.act2_din.ui.theme.Fondo
 import com.example.act2_din.ui.theme.Gray
 
 
 @Composable
-fun BottonLogin(Usuario: String,Contrasenia: String,onBotonChange:(String) -> Unit){
-    Spacer(Modifier.height(25.dp))
+fun BottonLogin(onBotonChange:() -> Unit){
+    Spacer(Modifier.height(15.dp))
     Button(
         onClick = {
-            onBotonChange(Usuario)
-            onBotonChange(Contrasenia)
+            onBotonChange()
         },
         colors = ButtonDefaults.buttonColors(
-            containerColor = Dark,    // Color de fondo de nuestro boton
-            contentColor = Fondo, // Color del texto
+            containerColor = ColorBoton,    // Color de fondo de nuestro boton
+            contentColor = Color.White, // Color del texto
             disabledContainerColor = Gray
         )
     ) {
-        Text(" Login ", fontFamily = FontFamily.SansSerif , color = Fondo)
+        Text(
+            text = "Iniciar Sesión",
+            fontFamily = FontFamily.SansSerif ,
+            color = Fondo
+        )
     }
 }
