@@ -1,4 +1,4 @@
-package com.example.act2_din.componentes_app.componentes_login
+package com.example.act2_din.componentes_app.componentes_login.Errors
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,8 +17,8 @@ import com.example.act2_din.ui.theme.LetraError
 
 
 @Composable
-fun TodoVacio(
-
+fun Mensaje_Error(
+    texto:String
 ){
     Spacer(Modifier.height(15.dp))
     Box(
@@ -31,7 +31,7 @@ fun TodoVacio(
 
     ){
         Text(
-            text = "El Usuario IdEA y la\ncontraseña son campos\nrequeridos.",
+            text = texto,
             color = LetraError
         )
     }

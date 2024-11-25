@@ -5,15 +5,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -21,10 +18,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.act2_din.componentes_app.Utils.ValidarUsuario
 import com.example.act2_din.componentes_app.componentes_login.BottonLogin
 import com.example.act2_din.componentes_app.componentes_login.Contrasenia
+import com.example.act2_din.componentes_app.componentes_login.Errors.ManagerErrors
+import com.example.act2_din.componentes_app.componentes_login.Errors.ValidacionErrores
 import com.example.act2_din.componentes_app.componentes_login.OtrasFormas
-import com.example.act2_din.componentes_app.componentes_login.TodoVacio
 import com.example.act2_din.componentes_app.componentes_login.Usuario
 
 
@@ -48,9 +47,7 @@ fun login() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
 
-            if (Error == "todo"){
-                TodoVacio()
-            }
+            ManagerErrors(Error)
 
             Usuario(Usuario){
                 Usuario=it
@@ -68,7 +65,13 @@ fun login() {
 
             BottonLogin(
                 onBotonChange = {
-                    if (Usuario.isEmpty() && Contrasenia.isEmpty()){Error = "todo"}else{Error = ""}
+                    Error = ValidacionErrores(Usuario,Contrasenia)
+                    if (Error.isEmpty()){
+
+                    }else{
+                        Usuario = ""
+                        Contrasenia = ""
+                    }
                 }
             )
 
