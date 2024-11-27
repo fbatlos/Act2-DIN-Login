@@ -4,9 +4,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import com.example.act2_din.componentes_app.encabezado
 import com.example.act2_din.componentes_app.login
 import com.example.act2_din.componentes_app.pie_pagina
@@ -44,4 +47,13 @@ fun AppLogIn(modifier: Modifier) {
             pie_pagina()
         }
     }
+}
+
+@Composable
+fun TextGeneral(text:String,color:Color){
+    Text(
+        text =text,
+        fontFamily = FontFamily.SansSerif ,
+        color = color
+    )
 }

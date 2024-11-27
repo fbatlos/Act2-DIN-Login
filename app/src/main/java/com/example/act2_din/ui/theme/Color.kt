@@ -26,3 +26,5 @@ val Elementos = Color(67, 132, 150)
 val FondoError = Color(248, 170, 164, 255)
 
 val LetraError = Color(84, 13, 7, 255)
+
+val Links = Color(36, 95, 112, 255)

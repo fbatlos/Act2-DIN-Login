@@ -24,6 +24,7 @@ import com.example.act2_din.componentes_app.componentes_login.Contrasenia
 import com.example.act2_din.componentes_app.componentes_login.Errors.ManagerErrors
 import com.example.act2_din.componentes_app.componentes_login.Errors.ValidacionErrores
 import com.example.act2_din.componentes_app.componentes_login.OtrasFormas
+import com.example.act2_din.componentes_app.componentes_login.RecuperarContrasenia
 import com.example.act2_din.componentes_app.componentes_login.Usuario
 
 
@@ -75,8 +76,9 @@ fun login() {
                 }
             )
 
-            OtrasFormas(onGoogleLogin = {}, onAppleLogin = {})
+            RecuperarContrasenia()
 
+            OtrasFormas(onGoogleLogin = {}, onAppleLogin = {})
         }
     }
 }

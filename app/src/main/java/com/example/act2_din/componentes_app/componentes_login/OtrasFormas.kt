@@ -58,8 +58,8 @@ fun OtrasFormas(
                 colors = ButtonDefaults.buttonColors(containerColor = Fondo),
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .height(50.dp)
+                    .fillMaxWidth(0.6f)
+                    .height(40.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -85,8 +85,8 @@ fun OtrasFormas(
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Black),
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .height(50.dp)
+                    .fillMaxWidth(0.6f)
+                    .height(40.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

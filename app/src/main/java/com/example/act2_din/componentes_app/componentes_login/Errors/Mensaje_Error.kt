@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.example.act2_din.TextGeneral
 import com.example.act2_din.ui.theme.FondoError
 import com.example.act2_din.ui.theme.LetraError
 
@@ -30,7 +31,7 @@ fun Mensaje_Error(
         contentAlignment = Alignment.Center
 
     ){
-        Text(
+        TextGeneral(
             text = texto,
             color = LetraError
         )

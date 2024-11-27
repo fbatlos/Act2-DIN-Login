@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.act2_din.TextGeneral
 import com.example.act2_din.ui.theme.Dark
 import com.example.act2_din.ui.theme.Elementos
 import com.example.act2_din.ui.theme.Gray
@@ -21,7 +22,11 @@ fun Usuario(Usuario:String, onUsuarioChange: (String) -> Unit){
     OutlinedTextField(
         value = Usuario,
         onValueChange = onUsuarioChange,
-        label = { Text(text = "Usuario", color = Elementos) },
+        label = {
+            TextGeneral(
+                text = "Usuario",
+                color = Elementos
+            )},
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = Elementos,
             unfocusedBorderColor = Gray,

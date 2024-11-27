@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.example.act2_din.TextGeneral
 import com.example.act2_din.ui.theme.Dark
 import com.example.act2_din.ui.theme.Elementos
 import com.example.act2_din.ui.theme.Gray
@@ -42,7 +43,12 @@ fun Contrasenia(contrasenia: String, onContraseniaChange: (String) -> Unit){
             focusedTextColor = Elementos,
             unfocusedTextColor = Gray
         ),
-        label = { Text(text = "Contraseña" , color = Elementos) },
+        label = {
+            TextGeneral(
+                text = "Contraseña" ,
+                color = Elementos
+            )},
+
         trailingIcon = {
             if (contrasenia.isNotEmpty()) {
                 IconButton(onClick = { active=!active }) {
