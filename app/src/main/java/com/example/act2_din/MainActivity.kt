@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.act2_din.ViewModel.LoginViewModel
 import com.example.act2_din.ui.theme.Act2DINTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,9 +17,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Act2DINTheme {
+                val viewModel = LoginViewModel()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     AppLogIn(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        viewModel = viewModel
                     )
                 }
             }

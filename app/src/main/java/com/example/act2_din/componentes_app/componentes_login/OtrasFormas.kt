@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import com.example.act2_din.R
 import androidx.compose.runtime.Composable
@@ -44,8 +45,28 @@ fun OtrasFormas(
         verticalArrangement = Arrangement.Center
 
     ){
+        Spacer(Modifier.height(5.dp))
 
-        Text("O", color = Elementos)
+        //HorizontalDivider poner
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 2.dp).weight(1f),
+                thickness = 2.dp,
+                color = Fondo
+            )
+            Text("Or", color = Elementos)
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 2.dp).weight(1f),
+                thickness = 2.dp,
+                color = Fondo
+            )
+        }
+
+        Spacer(Modifier.height(5.dp))
 
         Column(
             verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -106,8 +127,7 @@ fun OtrasFormas(
                     )
                 }
             }
-
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(5.dp))
         }
 
     }

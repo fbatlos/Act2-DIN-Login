@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -20,20 +21,26 @@ import com.example.act2_din.ui.theme.Gray
 
 
 @Composable
-fun BottonLogin(onBotonChange:() -> Unit){
+fun BottonLogin(onBotonChange:() -> Unit , enable:Boolean){
     Spacer(Modifier.height(15.dp))
+
     Button(
         modifier = Modifier
-            .fillMaxWidth(0.8f)
+            .fillMaxWidth(0.7f)
             .height(50.dp),
+
         onClick = {
             onBotonChange()
         },
+
         colors = ButtonDefaults.buttonColors(
             containerColor = ColorBoton,    // Color de fondo de nuestro boton
             contentColor = Color.White, // Color del texto
             disabledContainerColor = Gray
-        )
+        ),
+
+        shape =  RoundedCornerShape(10.dp),
+        enabled = enable
     ) {
         TextGeneral(
             text = "Iniciar Sesión",
