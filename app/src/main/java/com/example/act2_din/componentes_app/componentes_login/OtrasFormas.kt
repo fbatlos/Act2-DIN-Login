@@ -47,7 +47,7 @@ fun OtrasFormas(
     ){
         Spacer(Modifier.height(5.dp))
 
-        //HorizontalDivider poner
+        //HorizontalDivider ya implementado
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
