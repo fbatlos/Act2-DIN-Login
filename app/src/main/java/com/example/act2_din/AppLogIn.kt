@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
+import androidx.navigation.NavHostController
 import com.example.act2_din.ViewModel.LoginViewModel
 import com.example.act2_din.componentes_app.encabezado
 import com.example.act2_din.componentes_app.login
@@ -18,7 +19,7 @@ import com.example.act2_din.ui.theme.Fondo
 
 
 @Composable
-fun AppLogIn(modifier: Modifier , viewModel: LoginViewModel) {
+fun AppLogIn(modifier: Modifier, viewModel: LoginViewModel, navContralador: NavHostController) {
 
     Column (
         modifier = modifier
@@ -39,7 +40,7 @@ fun AppLogIn(modifier: Modifier , viewModel: LoginViewModel) {
             modifier = Modifier.weight(3f)
 
         ){
-            login(viewModel)
+            login(viewModel,navContralador)
         }
 
         Box(

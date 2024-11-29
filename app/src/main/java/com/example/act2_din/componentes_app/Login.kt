@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.act2_din.ViewModel.LoginViewModel
 import com.example.act2_din.componentes_app.Utils.ValidarUsuario
 import com.example.act2_din.componentes_app.componentes_login.BottonLogin
@@ -31,10 +32,11 @@ import com.example.act2_din.componentes_app.componentes_login.Errors.ValidacionE
 import com.example.act2_din.componentes_app.componentes_login.OtrasFormas
 import com.example.act2_din.componentes_app.componentes_login.RecuperarContrasenia
 import com.example.act2_din.componentes_app.componentes_login.Usuario
+import com.example.pruebaclasepdm.Navegation.AppScreen
 
 
 @Composable
-fun login(viewModel: LoginViewModel) {
+fun login(viewModel: LoginViewModel , navController: NavController) {
 
     val Usuario by viewModel.email.observeAsState("")
     val Contrasenia by viewModel.contrasenia.observeAsState("")
@@ -76,7 +78,7 @@ fun login(viewModel: LoginViewModel) {
                     //Meter en viewModel
                     Error = ValidacionErrores(Usuario,Contrasenia)
                     if (Error.isEmpty()){
-
+                        navController.navigate(AppScreen.intoScreen.router+"/$Usuario")
                     }else{
                         viewModel.onLoginChange(email = "" , contasenia = "")
                     }

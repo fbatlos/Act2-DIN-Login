@@ -92,7 +92,7 @@ fun OtrasFormas(
                         modifier = Modifier.size(24.dp)
                     )
                     Text(
-                        text = "Sign in with Google",
+                        text = "Sign in",
                         fontSize = 16.sp,
                         color = Color.Black,
                         fontWeight = FontWeight.Bold
@@ -120,7 +120,7 @@ fun OtrasFormas(
 
                     )
                     Text(
-                        text = "Sign in with Apple",
+                        text = "Sign in",
                         fontSize = 16.sp,
                         color = Color.White,
                         fontWeight = FontWeight.Bold
