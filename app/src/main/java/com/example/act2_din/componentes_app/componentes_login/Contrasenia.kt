@@ -34,6 +34,7 @@ fun Contrasenia(contrasenia: String, onContraseniaChange: (String) -> Unit){
     OutlinedTextField(
         value = contrasenia,
         onValueChange = onContraseniaChange,
+        singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = Elementos,
             unfocusedBorderColor = Gray,

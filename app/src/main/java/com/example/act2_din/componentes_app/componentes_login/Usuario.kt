@@ -27,6 +27,7 @@ fun Usuario(Usuario:String, onUsuarioChange: (String) -> Unit){
                 text = "Usuario",
                 color = Elementos
             )},
+        singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = Elementos,
             unfocusedBorderColor = Gray,
