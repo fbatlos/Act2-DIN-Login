@@ -18,6 +18,10 @@ class LoginViewModel():ViewModel() {
     private val _isLoginEnable = MutableLiveData<Boolean>()
     val isLoginEnable:LiveData<Boolean> = _isLoginEnable
 
+    private val _error = MutableLiveData<String>()
+    val error:LiveData<String> = _error
+
+
 
 
     fun onLoginChange(email: String,contasenia:String){

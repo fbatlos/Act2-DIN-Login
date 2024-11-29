@@ -38,7 +38,7 @@ fun Usuario(Usuario:String, onUsuarioChange: (String) -> Unit){
             unfocusedTextColor = Gray
         ),
         modifier = Modifier
-            .size(200.dp, 60.dp)
+            .size(200.dp, 70.dp)
     )
     Spacer(Modifier.height(15.dp))
 }

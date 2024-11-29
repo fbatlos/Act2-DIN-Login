@@ -58,7 +58,7 @@ fun Contrasenia(contrasenia: String, onContraseniaChange: (String) -> Unit){
             }
         },
         modifier = Modifier
-            .size(200.dp, 60.dp),
+            .size(200.dp, 70.dp),
 
         visualTransformation = if (!active) PasswordVisualTransformation() else VisualTransformation.None
 

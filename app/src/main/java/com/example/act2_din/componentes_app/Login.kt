@@ -38,6 +38,7 @@ fun login(viewModel: LoginViewModel) {
 
     val Usuario by viewModel.email.observeAsState("")
     val Contrasenia by viewModel.contrasenia.observeAsState("")
+    val IsEnable by viewModel.isLoginEnable.observeAsState(false)
 
     var Error by rememberSaveable { mutableStateOf("") }
     Box (
@@ -80,7 +81,7 @@ fun login(viewModel: LoginViewModel) {
                         viewModel.onLoginChange(email = "" , contasenia = "")
                     }
                 },
-                enable = viewModel.loginEneable(email = Usuario, contrasenia = Contrasenia)
+                enable = IsEnable
             )
 
             Spacer(Modifier.height(9.dp))

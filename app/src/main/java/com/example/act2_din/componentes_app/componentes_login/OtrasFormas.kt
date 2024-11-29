@@ -57,7 +57,7 @@ fun OtrasFormas(
                 thickness = 2.dp,
                 color = Fondo
             )
-            Text("Or", color = Elementos)
+            Text("O", color = Elementos)
 
             HorizontalDivider(
                 modifier = Modifier.padding(horizontal = 2.dp).weight(1f),
